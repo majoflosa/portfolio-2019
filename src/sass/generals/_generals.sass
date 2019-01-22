@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700|Overpass:400,600|Roboto+Mono');
+    
+body
+    margin: 0
+    font-family: $primaryFont
+    font-weight: 300
+    color: $primaryFontColor
+
+h1, h2, h3, h4, h5, h6
+    font-family: $headerFont
+    font-weight: normal
+    color: darken($primaryFontColor, 20%)
+
+a, a:active, a:visited
+    color: $secondaryColor
+    text-decoration: none
+    +mainTransition
+a:hover
+    text-decoration: underline
+    color: $lightSecondaryColor
+
+code
+    background: $lightGrey
+    color: darken($midGrey, 15%)
+    padding: 8px 14px
+    border-radius: $boxRadius
+    &, pre
+        font-family: 'Roboto Mono', monospace
+        font-size: 0.9em
+        font-size: 0.9rem
+.code-block
+    display: block
+
+img
+    display: block
+    max-width: 100%
+.img-block
+    width: 100%
+.img-left
+    float: left
+    margin: 0 20px 20px 0
+.img-right
+    float: right
+    margin: 0 0 20px 20px
+.img-center
+    display: block
+    margin: 0 auto
+.img-round
+    border-radius: 999px
+
+strong
+    color: darken($primaryFontColor, 10%)
+
+.separator-title
+    &-center
+        &::after
+            +separatorTitle
+            margin: 13px auto 0
+    &-right
+        &::after
+            +separatorTitle
+            margin: 13px 0 0 auto
+    &-left
+        &::after
+            +separatorTitle
+            margin: 13px 0 0
+
+#loading-screen
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: #ffffff
+    color: #dddddd
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    z-index: 99
+    
+    .loading-message
+        margin: 0 auto
+        transition: all 1.25s ease-in-out
+        -webkit-transition: all 1.25s ease-in-out
+        -moz-transition: all 1.25s ease-in-out
+        -ms-transition: all 1.25s ease-in-out
+        -o-transition: all 1.25s ease-in-out
+
+    &.fulfilled
+        overflow: hidden
+        animation-name: fadeOut
+        animation-duration: 0.5s
+        animation-iteration-count: 1
+        animation-timing-function: ease-in-out
+        animation-fill-mode: forwards
+        animation-delay: 1s
+
+        .loading-message
+            opacity: 0
+
+@keyframes pageLoaded
+    0%
+        height: 6px
+        width: 150px
+        opacity: 1
+    70%
+        height: 0px
+        width: 70%
+        opacity: 0
+    100%
+        height: 0px
+        width: 70%
+        opacity: 0
+
+@keyframes fadeOut
+    0%
+        height: 100vh
+        opacity: 1
+    90%
+        height: 100vh
+        opacity: 0
+    100%
+        height: 0
+        opacity: 0
+
+
+#spinner-3-dots
+    border: 10px solid transparent
+    height: 30px
+    width: 30px
+    margin: 30px auto
+    border-radius: 50%
+    text-align: center
+    position: relative
+    animation-name: spinner3dots
+    animation-duration: 3.3s
+    animation-timing-function: ease-in-out
+    animation-direction: alternate
+    animation-iteration-count: infinite
+
+    .dot
+        position: absolute
+        display: inline-block
+        height: 10px
+        width: 10px
+        border-radius: 50%
+        transform-origin: center
+    .dot-1
+        background: $primaryColor
+        transform: translate(-50%, -10px)
+
+    .dot-2
+        background: $secondaryColor
+        left: -7px
+        transform: translate(0, 200%)
+
+    .dot-3
+        background: $thirdColor
+        right: -7px
+        transform: translate(0, 200%)
+
+@keyframes spinner3dots
+    0% 
+        transform: rotate(0) scale(1)
+    100% 
+        transform: rotate(1080deg) scale(0.2)
+
+.page-wrap
+    width: 100%
+    max-width: 100%
+    box-sizing: border-box
+
+
+.bullet-check-circle-primary
+    +checkmark($lightPrimaryColor, $primaryColor, 99px)
+.bullet-check-circle-secondary
+    +checkmark($lightSecondaryColor, $secondaryColor, 99px)
+.bullet-check-circle-third
+    +checkmark($thirdColor, $darkThirdColor, 99px)
+
+.bullet-check-square-primary
+    +checkmark($lightPrimaryColor, $primaryColor, 3px)
+.bullet-check-square-secondary
+    +checkmark($lightSecondaryColor, $secondaryColor, 3px)
+.bullet-check-square-third
+    +checkmark($thirdColor, $darkThirdColor, 3px)
+
+.bullet-x-circle-primary
+    +xmark($lightPrimaryColor, $primaryColor, 99px)
+.bullet-x-circle-secondary
+    +xmark($lightSecondaryColor, $secondaryColor, 99px)
+.bullet-x-circle-third
+    +xmark($thirdColor, $darkThirdColor, 99px)
+
+.bullet-x-square-primary
+    +xmark($lightPrimaryColor, $primaryColor, 3px)
+.bullet-x-square-secondary
+    +xmark($lightSecondaryColor, $secondaryColor, 3px)
+.bullet-x-square-third
+    +xmark($thirdColor, $darkThirdColor, 3px)
+

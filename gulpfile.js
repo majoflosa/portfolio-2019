@@ -70,3 +70,6 @@ gulp.task('watch', () => {
     gulp.watch( './src/*.html', ['html'] );
     gulp.watch( './src/img/*', ['copyimg'] );
 });
+
+
+gulp.task('ship', ['sass-dev', 'sass-prod', 'babel', 'uglifyjs', 'html', 'copyimg']);
