@@ -22,8 +22,8 @@ class ModalBox {
 
     setTogglers( selectors ) {
         for ( let i = 0; i < selectors.length; i++ ) {
-            let $toggler = document.querySelector( selectors[i] );
-            if ( $toggler ) this.$togglers.push( $toggler );
+            let $toggler = document.querySelectorAll( selectors[i] );
+            if ( $toggler ) this.$togglers.push( ...$toggler );
         } 
     }
 
@@ -31,7 +31,9 @@ class ModalBox {
         this.$togglers.forEach( $toggler => $toggler.addEventListener('click', this.toggleModal) );
     }
 
-    toggleModal() {
+    toggleModal( event ) {
+        event.preventDefault();
+        
         if ( this.displaying ) {
             this.$modal.classList.remove( 'showing' );
             this.$modal.classList.add( 'hidden' );

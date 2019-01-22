@@ -1,0 +1,81 @@
+.main-nav
+    position: fixed
+    z-index: 3
+    top: 0
+    left: 0
+    width: 100%
+    border-bottom: 1px solid rgba(white, 0.2)
+    padding: 30px
+    box-sizing: border-box
+    +mainFlex
+    flex-wrap: wrap
+    +mainTransition
+
+    &-logo
+        position: relative
+        a
+            color: #ffffff
+            font-weight: bold
+            text-transform: uppercase
+
+    .menu-header
+        display: none
+
+    &-link, a
+        display: inline-block
+        margin: 0 8px
+        color: #ffffff
+        text-transform: uppercase
+        font-family: $headerFont
+        font-size: 0.9em
+        font-size: 0.9rem
+        &:hover, &.active
+            text-decoration: none
+            color: lighten($secondaryColor, 25%)
+        &.download-theme
+            background: #ffffff
+            color: $darkSecondaryColor
+            padding: 5px 10px
+            border-radius: $boxRadius
+        &.active
+
+    &.sticky
+        padding-top: 20px
+        padding-bottom: 20px
+        background: rgba(white, 0.95)
+        border-bottom: 1px solid $lightSecondaryColor
+        &-link, a
+            color: $secondaryColor
+            &:hover
+                color: $darkSecondaryColor // lighten($secondaryColor, 15%)
+            &.download-theme
+                background: $darkSecondaryColor
+                color: #ffffff
+            &.active
+                color: $darkSecondaryColor
+
+.mobile-menu-button
+    /* Customize your menu button */
+    display: none
+    padding: 8px 12px
+    background: #ffffff
+    text-transform: uppercase
+    cursor: pointer
+    svg
+        margin-right: 8px
+
+@media screen and (max-width: 960px)
+    .main-nav
+        flex-wrap: wrap
+        max-width: 100%
+    .mobile-menu-button
+        display: inline-block
+        position: 
+        z-index: 3
+    .main-nav-links
+        display: none
+        position: absolute
+        top: 0
+        right: 0px
+        width: 100%
+        box-sizing: border-box

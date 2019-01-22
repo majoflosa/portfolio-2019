@@ -27,12 +27,18 @@
         position: absolute
         top: 10px
         right: 10px
-        +xmark(darken($lightGrey, 10%), $midGrey, 3px)
-        +mainTransition
+        // +xmark(darken($lightGrey, 10%), $midGrey, 3px)
+        svg
+            display: inline-block
+            width: 15px
+            fill: #aaaaaa
+            +mainTransition
         &:hover
-            background: darken($midGrey, 5%)
-            color: #ffffff
-            text-decoration: none
+            // background: darken($midGrey, 5%)
+            // color: #ffffff
+            // text-decoration: none
+            svg
+                fill: #555555
 
     &-buttons
         button

@@ -3672,17 +3672,24 @@ function () {
   }]);
 
   return CarouselGallery;
-}();
+}(); // window.addEventListener('load', () => {
+//     const articlesCarousel = new CarouselGallery({
+//         outerWrapperSelector: '.landing-articles-list-outer',
+//         innerWrapperSelector: '.landing-articles-list',
+//         itemSelector: '.landing-articles-item',
+//         bulletSelector: '.carousel-bullet',
+//         selectedBulletClass: 'selected-bullet',
+//         animationDuration: 0.5 // seconds; defaults to 0.5
+//     });
+// });
+
 
 window.addEventListener('load', function () {
-  var articlesCarousel = new CarouselGallery({
-    outerWrapperSelector: '.landing-articles-list-outer',
-    innerWrapperSelector: '.landing-articles-list',
-    itemSelector: '.landing-articles-item',
-    bulletSelector: '.carousel-bullet',
-    selectedBulletClass: 'selected-bullet',
-    animationDuration: 0.5 // seconds; defaults to 0.5
-
+  var landingModal = new ModalBox({
+    wrapperSelector: '.contact-modal',
+    togglerSelectors: ['.modal-close', '.splash-cta', '.contact-link'],
+    hiddenClass: 'hidden',
+    visibleClass: 'visible'
   });
 });
 
@@ -4008,8 +4015,10 @@ function () {
     key: "setTogglers",
     value: function setTogglers(selectors) {
       for (var i = 0; i < selectors.length; i++) {
-        var $toggler = document.querySelector(selectors[i]);
-        if ($toggler) this.$togglers.push($toggler);
+        var _this$$togglers;
+
+        var $toggler = document.querySelectorAll(selectors[i]);
+        if ($toggler) (_this$$togglers = this.$togglers).push.apply(_this$$togglers, _toConsumableArray($toggler));
       }
     }
   }, {
@@ -4023,7 +4032,9 @@ function () {
     }
   }, {
     key: "toggleModal",
-    value: function toggleModal() {
+    value: function toggleModal(event) {
+      event.preventDefault();
+
       if (this.displaying) {
         this.$modal.classList.remove('showing');
         this.$modal.classList.add('hidden');

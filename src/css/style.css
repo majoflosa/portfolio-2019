@@ -2159,14 +2159,12 @@ input[type="reset"]:hover {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.modal-close svg, .modal a.modal-close svg {
   display: inline-block;
-  background: #f7f7f7;
-  color: #aaaaaa;
-  padding: 5px 9px 3px;
-  font-size: 0.8em;
-  font-size: 0.8rem;
-  border-radius: 3px;
-  margin: 0 5px 0 0;
+  width: 15px;
+  fill: #aaaaaa;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -2174,10 +2172,8 @@ input[type="reset"]:hover {
   -o-transition: all 0.25s ease-in-out;
 }
 
-.modal-close:hover, .modal a.modal-close:hover {
-  background: #9d9d9d;
-  color: #ffffff;
-  text-decoration: none;
+.modal-close:hover svg, .modal a.modal-close:hover svg {
+  fill: #555555;
 }
 
 .modal-buttons button {
@@ -2208,5 +2204,207 @@ input[type="reset"]:hover {
     height: 0;
     width: 0;
     opacity: 0;
+  }
+}
+
+.main-nav {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: initial;
+  flex-wrap: wrap;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.main-nav-logo {
+  position: relative;
+}
+
+.main-nav-logo a {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main-nav .menu-header {
+  display: none;
+}
+
+.main-nav-link, .main-nav a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Overpass", sans-serif;
+  font-size: 0.9em;
+  font-size: 0.9rem;
+}
+
+.main-nav-link:hover, .main-nav-link.active, .main-nav a:hover, .main-nav a.active {
+  text-decoration: none;
+  color: #dfecfe;
+}
+
+.main-nav-link.download-theme, .main-nav a.download-theme {
+  background: #ffffff;
+  color: #1a7af6;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.main-nav.sticky {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #aed0fc;
+}
+
+.main-nav.sticky-link, .main-nav.sticky a {
+  color: #64a5f9;
+}
+
+.main-nav.sticky-link:hover, .main-nav.sticky a:hover {
+  color: #1a7af6;
+}
+
+.main-nav.sticky-link.download-theme, .main-nav.sticky a.download-theme {
+  background: #1a7af6;
+  color: #ffffff;
+}
+
+.main-nav.sticky-link.active, .main-nav.sticky a.active {
+  color: #1a7af6;
+}
+
+.mobile-menu-button {
+  /* Customize your menu button */
+  display: none;
+  padding: 8px 12px;
+  background: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mobile-menu-button svg {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 960px) {
+  .main-nav {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .mobile-menu-button {
+    display: inline-block;
+    z-index: 3;
+  }
+  .main-nav-links {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.splash {
+  position: relative;
+  background: linear-gradient(-45deg, #aed0fc, #1a7af6);
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.splash-content {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.splash-content > div {
+  width: 47%;
+  margin: 0 1%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.splash-content-right {
+  text-align: center;
+}
+
+.splash-title {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-size: 2.5rem;
+  margin-top: 0;
+  color: inherit;
+}
+
+.splash-tagline {
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  font-size: 1.2rem;
+  color: #dfecfe;
+}
+
+.splash-cta:hover {
+  text-decoration: none;
+}
+
+.splash-scroll-down {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.splash-scroll-down svg {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  margin-bottom: 10px;
+  fill: #ffffff;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.splash-scroll-down svg:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 960px) {
+  .splash-scroll-down {
+    display: none;
+  }
+  .splash .splash-content {
+    display: block;
+  }
+  .splash .splash-content-left, .splash .splash-content-right, .splash .splash-content > div {
+    display: block;
+    width: auto;
+    max-width: none;
+    text-align: center;
   }
 }
