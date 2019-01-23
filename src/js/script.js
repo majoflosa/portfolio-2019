@@ -3835,6 +3835,15 @@ function () {
 }();
 
 window.addEventListener('load', function () {
+  var servicesFadeIn = new FadeInOnscroll({
+    contentSelector: '.services-section-list',
+    fadeInSectionsSelector: '.services-section-item',
+    animationDuration: 1,
+    positionShift: 50,
+    staggerDelay: 0.3
+  });
+});
+window.addEventListener('load', function () {
   var plxBanner = new BasicPlxBanner({
     bannerSelector: '.splash',
     backgroundSelector: '.plx-background',
@@ -3842,14 +3851,17 @@ window.addEventListener('load', function () {
   });
 });
 window.addEventListener('load', function () {
-  // const taglineAnimation = new FadeInOnscroll({
-  //     contentSelector: '.landing-services-list',
-  //     fadeInSectionsSelector: '.landing-services-item',
-  //     animationDuration: 1,
-  //     positionShift: 50,
-  //     staggerDelay: 0.3
-  // });
   var taglinePieces = document.querySelectorAll('.tagline-piece');
+
+  if (!taglinePieces.length) {
+    console.warn('No tagline pieces found');
+    return false;
+  }
+
+  _toConsumableArray(taglinePieces).forEach(function (piece) {
+    return piece.style.opacity = 0;
+  });
+
   setTimeout(function () {
     TweenMax.staggerFromTo(taglinePieces, 0.75, {
       opacity: 0,
@@ -3858,7 +3870,7 @@ window.addEventListener('load', function () {
       opacity: 1,
       y: 0
     }, 0.2);
-  }, 700);
+  }, 300);
 });
 
 var InfiniteCarousel =

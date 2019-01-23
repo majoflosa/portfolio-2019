@@ -1,12 +1,11 @@
 window.addEventListener('load', () => {
-    // const taglineAnimation = new FadeInOnscroll({
-    //     contentSelector: '.landing-services-list',
-    //     fadeInSectionsSelector: '.landing-services-item',
-    //     animationDuration: 1,
-    //     positionShift: 50,
-    //     staggerDelay: 0.3
-    // });
     const taglinePieces = document.querySelectorAll('.tagline-piece');
+    if ( !taglinePieces.length ) {
+        console.warn('No tagline pieces found');
+        return false;
+    }
+    
+    [...taglinePieces].forEach( piece => piece.style.opacity = 0);
     setTimeout( () => {
         TweenMax.staggerFromTo( 
             taglinePieces, 
@@ -15,5 +14,5 @@ window.addEventListener('load', () => {
             { opacity: 1, y: 0 },
             0.2
         );
-    }, 700);
+    }, 300);
 });

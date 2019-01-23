@@ -1,0 +1,59 @@
+.services-section
+    .page-section-title
+        text-align: center
+    &-list
+        +mainFlex(space-between, stretch)
+    &-item
+        // border: 1px solid #eeeeee
+        flex: 0 0 23%
+        // margin: 1%
+        // flex-wrap: wrap
+        text-align: center
+        &-icon
+            svg
+                // display: block
+                // margin: 0 auto
+                fill: lighten($primaryColor, 10%)
+                height: 100px
+            h3
+                color: $primaryColor
+                border-top: 2px solid lighten($lightPrimaryColor, 30%)
+                padding-top: 15px
+                position: relative
+                box-sizing: border-box
+                &::before
+                    position: absolute
+                    content: " "
+                    display: block
+                    box-sizing: border-box
+                    width: 0
+                    left: 50%
+                    top: -2px
+                    border-top: 2px solid $primaryColor
+                    +mainTransition(all, 0.6s)
+        &:hover
+            .services-section-item-icon
+                h3::before
+                    width: 100%
+                    left: 0
+    
+
+@media screen and (max-width: 960px)
+    .services-section
+        &-list
+            +mainFlex(center, stretch)
+            flex-wrap: wrap
+        &-item
+            flex: 0 0 45%
+            margin: 0 2.5% 30px
+
+@media screen and (max-width: 600px)
+    .services-section
+        &-list
+            display: block
+        &-item
+            display: block
+            margin: 0 auto 60px
+            width: 90%
+
+        
