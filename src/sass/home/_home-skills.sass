@@ -1,0 +1,154 @@
+.skills-section
+    .page-section-inner
+        max-width: none
+        width: auto
+    .page-section-title
+            text-align: center
+            
+
+    &-list
+        +mainFlex(initial, stretch)
+        flex-wrap: wrap
+    &-item
+        flex: 0 0 20%
+        text-align: center
+        box-sizing: border-box
+        transform-origin: center
+        min-height: 220px
+        +mainFlex(center, center, column)
+        +mainTransition
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4),
+        &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9),
+        &:nth-child(11), &:nth-child(12), &:nth-child(13), &:nth-child(14)
+            border-right: 1px solid lighten($lightPrimaryColor, 40%)
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5),
+        &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10)
+            border-bottom: 1px solid lighten($lightPrimaryColor, 40%)
+            // background: lighten($lightPrimaryColor, 44%)
+        
+        &:hover
+            background: lighten($lightPrimaryColor, 40%)
+            // transform: scale(1.1) !important
+            // position: relative
+            // z-index: 2
+
+        &-icon
+            margin-top: 20px
+            text-align: center
+            svg, img
+                height: 80px
+            img
+                display: block
+                margin: 0 auto
+            // div
+            //     height: 100px
+            h4
+        .html-icon
+            fill: #d65844
+        .css-icon
+            fill: #3473af
+        .sass-icon
+            fill: #c17199
+        .css-animation-icon
+            height: 80px
+        .js-icon
+            fill: #eed767
+        .js-animation-icon
+        .rwd-icon
+            fill: $lightPrimaryColor
+        .react-icon
+            fill: #78d8f4
+        .node-icon
+            fill: #65984b
+        .gulp-icon
+            fill: #d9595a
+        .git-icon
+        .wp-icon
+            fill: #464646
+        
+
+
+#bars
+    text-align: center
+    margin: 30px auto
+    position: relative
+    height: 30px
+
+    .bar
+        display: inline-block
+        height: 1px
+        width: 15px
+        background: $lightPrimaryColor
+        margin: 0 3px -15px
+        transform-origin: center bottom
+        animation-name: barsLoader
+        animation-duration: 2.3s
+        animation-timing-function: ease-in-out
+        animation-iteration-count: infinite
+    .bar-1
+        animation-delay: 0s
+    .bar-2
+        animation-delay: 0.17s
+    .bar-3
+        animation-delay: 0.34s
+
+
+@keyframes barsLoader
+    0%
+        transform: scaleY(1)
+    10%
+        transform: scaleY(30)
+    40%
+        transform: scaleY(1)
+    100%
+        transform: scaleY(1)
+
+@media screen and (max-width: 1024px)
+    .skills-section
+        &-list
+        &-item
+            min-height: 0
+            &-icon
+
+@media screen and (max-width: 960px)
+    .skills-section
+        &-item
+            flex: 1 0 33%
+            border: none
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5),
+            &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10),
+            &:nth-child(11), &:nth-child(12)
+                border-bottom: 1px solid lighten($lightPrimaryColor, 40%)
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5), &:nth-child(7), &:nth-child(8),
+            &:nth-child(10), &:nth-child(11), &:nth-child(13), &:nth-child(14)
+                border-right: 1px solid lighten($lightPrimaryColor, 40%)
+            
+@media screen and (max-width: 600px)
+    .skills-section
+        &-item
+            flex: 0 0 50%
+            border: none
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5),
+            &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10),
+            &:nth-child(11), &:nth-child(12), &:nth-child(13), &:nth-child(14)
+                border-bottom: 1px solid lighten($lightPrimaryColor, 40%)
+
+            &:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(7), &:nth-child(9), &:nth-child(11),
+            &:nth-child(13), &:nth-child(15)
+                border-right: 1px solid lighten($lightPrimaryColor, 40%)
+
+@media screen and (max-width: 400px)
+    .skills-section
+        &-list
+            display: block
+        &-item
+            // flex: 0 0 50%
+            width: auto
+            max-width: 300px
+            min-height: 220px
+            margin: 0 auto
+            border-right: none !important
+            border-bottom: 1px solid lighten($lightPrimaryColor, 40%)

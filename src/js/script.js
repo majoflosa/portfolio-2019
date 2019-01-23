@@ -3844,6 +3844,21 @@ window.addEventListener('load', function () {
   });
 });
 window.addEventListener('load', function () {
+  var skills = new FadeInOnscroll({
+    contentSelector: '.skills-section-list',
+    fadeInSectionsSelector: '.skills-section-item',
+    animationDuration: 0.3,
+    positionShift: 30,
+    staggerDelay: 0.15,
+    extraFromOptions: {
+      scale: 0.5
+    },
+    extraToOptions: {
+      scale: 1
+    }
+  });
+});
+window.addEventListener('load', function () {
   var plxBanner = new BasicPlxBanner({
     bannerSelector: '.splash',
     backgroundSelector: '.plx-background',
