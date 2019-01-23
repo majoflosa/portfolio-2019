@@ -1,11 +1,32 @@
 .splash
     position: relative
-    background: linear-gradient(-45deg, $lightSecondaryColor, $darkSecondaryColor)
-    min-height: 95vh
+    // background: linear-gradient(-45deg, $lightSecondaryColor, $darkSecondaryColor)
+    background-image: url('../img/home-banner-1.jpg')
+    background-size: cover
+    background-repeat: no repeat
+    background-position: center
+    min-height: 80vh
     display: flex
     justify-content: center
     align-items: center
     overflow: hidden
+
+    .plx-background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        img
+            width: 100%
+
+    &-overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.5))
 
     &-content
         position: relative
@@ -34,10 +55,23 @@
         font-size: 1.2em
         font-size: 1.2rem
         color: lighten($secondaryColor, 25%)
+        .tagline-piece
+            display: inline-block
+        span.tagline-piece
+            color: lighten($secondaryColor, 20%)
+            // color: #cccccc
+        // animation: fadeTagLinePieces 1 ease-in-out 1
 
     &-cta
-        &:hover
-            text-decoration: none
+        a
+            display: inline-block
+            color: #ffffff
+            font-size: 1.1em
+            font-size: 1.1rem
+            padding-bottom: 15px
+            margin-top: 25px
+            font-weight: bold
+            text-transform: uppercase
 
     &-scroll-down
         position: absolute
@@ -70,3 +104,11 @@
                 max-width: none
                 text-align: center
                 
+
+@keyframes fadeTaglinePieces
+    0%
+        opacity: 0
+        transform: translateY(50)
+    100%
+        opacity: 1
+        transform: translateY(0)

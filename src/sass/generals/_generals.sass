@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700|Overpass:400,600|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700');
     
 body
     margin: 0
@@ -49,7 +49,7 @@ img
     border-radius: 999px
 
 strong
-    color: darken($primaryFontColor, 10%)
+    // color: darken($primaryFontColor, 10%)
 
 .separator-title
     &-center
@@ -71,8 +71,7 @@ strong
     left: 0
     width: 100%
     height: 100vh
-    background: #ffffff
-    color: #dddddd
+    background: $primaryColor
     display: flex
     flex-direction: column
     justify-content: center
@@ -126,13 +125,15 @@ strong
 
 
 #spinner-3-dots
-    border: 10px solid transparent
+    border: 11px solid lighten($primaryColor, 5%)
+    background: lighten($primaryColor, 5%)
     height: 30px
     width: 30px
     margin: 30px auto
     border-radius: 50%
     text-align: center
     position: relative
+    transform: scale(0.7)
     animation-name: spinner3dots
     animation-duration: 3.3s
     animation-timing-function: ease-in-out
@@ -146,25 +147,26 @@ strong
         width: 10px
         border-radius: 50%
         transform-origin: center
+        background: #ffffff
     .dot-1
-        background: $primaryColor
+        // background: $primaryColor
         transform: translate(-50%, -10px)
 
     .dot-2
-        background: $secondaryColor
+        // background: $secondaryColor
         left: -7px
         transform: translate(0, 200%)
 
     .dot-3
-        background: $thirdColor
+        // background: $thirdColor
         right: -7px
         transform: translate(0, 200%)
 
 @keyframes spinner3dots
     0% 
-        transform: rotate(0) scale(1)
+        transform: rotate(0) scale(0.7)
     100% 
-        transform: rotate(1080deg) scale(0.2)
+        transform: rotate(1080deg) scale(0.7)
 
 .page-wrap
     width: 100%

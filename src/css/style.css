@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700|Overpass:400,600|Roboto+Mono");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700");
 body {
   margin: 0;
-  font-family: "Heebo", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   color: #777777;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: normal;
   color: #444444;
 }
@@ -31,7 +31,7 @@ code {
   background: #f7f7f7;
   color: #848484;
   padding: 8px 14px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 code, code pre {
@@ -72,14 +72,10 @@ img {
   border-radius: 999px;
 }
 
-strong {
-  color: #5e5e5e;
-}
-
 .separator-title-center::after {
   display: block;
   content: " ";
-  border: 2px solid #a7f6d4;
+  border: 2px solid #6680b0;
   width: 30px;
   border-radius: 5px;
   margin: 13px auto 0;
@@ -88,7 +84,7 @@ strong {
 .separator-title-right::after {
   display: block;
   content: " ";
-  border: 2px solid #a7f6d4;
+  border: 2px solid #6680b0;
   width: 30px;
   border-radius: 5px;
   margin: 13px 0 0 auto;
@@ -97,7 +93,7 @@ strong {
 .separator-title-left::after {
   display: block;
   content: " ";
-  border: 2px solid #a7f6d4;
+  border: 2px solid #6680b0;
   width: 30px;
   border-radius: 5px;
   margin: 13px 0 0;
@@ -109,8 +105,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #ffffff;
-  color: #dddddd;
+  background: #222d42;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,13 +170,15 @@ strong {
 }
 
 #spinner-3-dots {
-  border: 10px solid transparent;
+  border: 11px solid #2b3853;
+  background: #2b3853;
   height: 30px;
   width: 30px;
   margin: 30px auto;
   border-radius: 50%;
   text-align: center;
   position: relative;
+  transform: scale(0.7);
   animation-name: spinner3dots;
   animation-duration: 3.3s;
   animation-timing-function: ease-in-out;
@@ -196,31 +193,29 @@ strong {
   width: 10px;
   border-radius: 50%;
   transform-origin: center;
+  background: #ffffff;
 }
 
 #spinner-3-dots .dot-1 {
-  background: #15D683;
   transform: translate(-50%, -10px);
 }
 
 #spinner-3-dots .dot-2 {
-  background: #64a5f9;
   left: -7px;
   transform: translate(0, 200%);
 }
 
 #spinner-3-dots .dot-3 {
-  background: #f3878d;
   right: -7px;
   transform: translate(0, 200%);
 }
 
 @keyframes spinner3dots {
   0% {
-    transform: rotate(0) scale(1);
+    transform: rotate(0) scale(0.7);
   }
   100% {
-    transform: rotate(1080deg) scale(0.2);
+    transform: rotate(1080deg) scale(0.7);
   }
 }
 
@@ -232,8 +227,8 @@ strong {
 
 .bullet-check-circle-primary {
   display: inline-block;
-  background: #d6fbeb;
-  color: #15D683;
+  background: #889cc2;
+  color: #222d42;
   padding: 5px 7px 3px;
   font-size: 0.8em;
   font-size: 0.8rem;
@@ -265,8 +260,8 @@ strong {
 
 .bullet-check-square-primary {
   display: inline-block;
-  background: #d6fbeb;
-  color: #15D683;
+  background: #889cc2;
+  color: #222d42;
   padding: 5px 7px 3px;
   font-size: 0.8em;
   font-size: 0.8rem;
@@ -298,8 +293,8 @@ strong {
 
 .bullet-x-circle-primary {
   display: inline-block;
-  background: #d6fbeb;
-  color: #15D683;
+  background: #889cc2;
+  color: #222d42;
   padding: 5px 9px 3px;
   font-size: 0.8em;
   font-size: 0.8rem;
@@ -331,8 +326,8 @@ strong {
 
 .bullet-x-square-primary {
   display: inline-block;
-  background: #d6fbeb;
-  color: #15D683;
+  background: #889cc2;
+  color: #222d42;
   padding: 5px 9px 3px;
   font-size: 0.8em;
   font-size: 0.8rem;
@@ -393,7 +388,7 @@ select {
   display: block;
   padding: 8px 12px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #aaaaaa;
   color: inherit;
   font-family: inherit;
@@ -437,7 +432,7 @@ input[type="week"]:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #a7f6d4;
+  border-color: #6680b0;
   border-width: 4px;
   box-sizing: border-box;
 }
@@ -505,7 +500,7 @@ select {
   font-size: 0.8rem;
   color: #ffffff;
   box-sizing: border-box;
-  border: 2px solid #15D683;
+  border: 2px solid #222d42;
   border-radius: 50%;
   margin: 0 5px 0 0;
 }
@@ -513,7 +508,7 @@ select {
 .radio-label input[type="radio"]:checked + .radio-selector, .radio-label input[type="radio"]:checked + .checkbox-selector {
   border: none;
   display: inline-block;
-  background: #33eb9c;
+  background: #334464;
   color: #ffffff;
   padding: 5px 7px 3px;
   font-size: 0.8em;
@@ -541,7 +536,7 @@ select {
   font-size: 0.8rem;
   color: #ffffff;
   box-sizing: border-box;
-  border: 2px solid #15D683;
+  border: 2px solid #222d42;
   border-radius: 3px;
   margin: 0 5px 0 0;
 }
@@ -549,7 +544,7 @@ select {
 .checkbox-label input[type="checkbox"]:checked + .radio-selector, .checkbox-label input[type="checkbox"]:checked + .checkbox-selector {
   border: none;
   display: inline-block;
-  background: #33eb9c;
+  background: #334464;
   color: #ffffff;
   padding: 5px 7px 3px;
   font-size: 0.8em;
@@ -564,7 +559,7 @@ select {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -572,7 +567,7 @@ select {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
   background: #64a5f9;
   color: #ffffff;
 }
@@ -603,7 +598,7 @@ select {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -611,7 +606,7 @@ select {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
   background: transparent;
   color: #64a5f9;
 }
@@ -648,17 +643,17 @@ input[type="button"], input[type="submit"] {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
-  background: #15D683;
+  background: #222d42;
   color: #ffffff;
-  border-color: #15D683;
-  border-radius: 10px;
+  border-color: #222d42;
+  border-radius: 4px;
 }
 
 input[type="button"]:focus, input[type="submit"]:focus {
@@ -670,8 +665,8 @@ input[type="button"]:hover, input[type="submit"]:hover {
 }
 
 input[type="button"]:hover, input[type="submit"]:hover {
-  background: #33eb9c;
-  border-color: #33eb9c;
+  background: #334464;
+  border-color: #334464;
 }
 
 input[type="button"].primary-border {
@@ -680,7 +675,7 @@ input[type="button"].primary-border {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -688,9 +683,9 @@ input[type="button"].primary-border {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
-  color: #15D683;
-  border-color: #15D683;
-  border-radius: 10px;
+  color: #222d42;
+  border-color: #222d42;
+  border-radius: 4px;
 }
 
 input[type="button"].primary-border:focus {
@@ -702,7 +697,7 @@ input[type="button"].primary-border:hover {
 }
 
 input[type="button"].primary-border:hover {
-  background: #15D683;
+  background: #222d42;
   color: #ffffff;
 }
 
@@ -712,7 +707,7 @@ input[type="button"].secondary {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -722,7 +717,7 @@ input[type="button"].secondary {
   background: #64a5f9;
   color: #ffffff;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 input[type="button"].secondary:focus {
@@ -744,7 +739,7 @@ input[type="button"].secondary-border {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -754,7 +749,7 @@ input[type="button"].secondary-border {
   background: transparent;
   color: #64a5f9;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 input[type="button"].secondary-border:focus {
@@ -776,7 +771,7 @@ input[type="reset"] {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -786,7 +781,7 @@ input[type="reset"] {
   background: transparent;
   color: #aaaaaa;
   border-color: #aaaaaa;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 input[type="reset"]:focus {
@@ -808,17 +803,17 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
-  background: #15D683;
+  background: #222d42;
   color: #ffffff;
-  border-color: #15D683;
-  border-radius: 10px;
+  border-color: #222d42;
+  border-radius: 4px;
 }
 
 .btn--primary:focus, a.btn--primary:focus {
@@ -830,8 +825,8 @@ input[type="reset"]:hover {
 }
 
 .btn--primary:hover, a.btn--primary:hover {
-  background: #33eb9c;
-  border-color: #33eb9c;
+  background: #334464;
+  border-color: #334464;
 }
 
 .btn--primary-border, a.btn--primary-border {
@@ -840,7 +835,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -848,9 +843,9 @@ input[type="reset"]:hover {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
-  color: #15D683;
-  border-color: #15D683;
-  border-radius: 10px;
+  color: #222d42;
+  border-color: #222d42;
+  border-radius: 4px;
 }
 
 .btn--primary-border:focus, a.btn--primary-border:focus {
@@ -862,7 +857,7 @@ input[type="reset"]:hover {
 }
 
 .btn--primary-border:hover, a.btn--primary-border:hover {
-  background: #15D683;
+  background: #222d42;
   color: #ffffff;
 }
 
@@ -872,17 +867,17 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
-  background: #0e9058;
+  background: #080b10;
   color: #ffffff;
-  border-color: #0e9058;
-  border-radius: 10px;
+  border-color: #080b10;
+  border-radius: 4px;
 }
 
 .btn--primary-dark:focus, a.btn--primary-dark:focus {
@@ -894,8 +889,8 @@ input[type="reset"]:hover {
 }
 
 .btn--primary-dark:hover, a.btn--primary-dark:hover {
-  background: #13bf75;
-  border-color: #13bf75;
+  background: #192231;
+  border-color: #192231;
 }
 
 .btn--primary-dark-border, a.btn--primary-dark-border {
@@ -904,7 +899,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -912,9 +907,9 @@ input[type="reset"]:hover {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
-  color: #0e9058;
-  border-color: #0e9058;
-  border-radius: 10px;
+  color: #080b10;
+  border-color: #080b10;
+  border-radius: 4px;
 }
 
 .btn--primary-dark-border:focus, a.btn--primary-dark-border:focus {
@@ -926,7 +921,7 @@ input[type="reset"]:hover {
 }
 
 .btn--primary-dark-border:hover, a.btn--primary-dark-border:hover {
-  background: #0e9058;
+  background: #080b10;
   color: #ffffff;
 }
 
@@ -936,17 +931,17 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
-  background: #a7f6d4;
+  background: #6680b0;
   color: #ffffff;
-  border-color: #a7f6d4;
-  border-radius: 10px;
+  border-color: #6680b0;
+  border-radius: 4px;
 }
 
 .btn--primary-light:focus, a.btn--primary-light:focus {
@@ -958,8 +953,8 @@ input[type="reset"]:hover {
 }
 
 .btn--primary-light:hover, a.btn--primary-light:hover {
-  background: #d6fbeb;
-  border-color: #d6fbeb;
+  background: #889cc2;
+  border-color: #889cc2;
 }
 
 .btn--primary-light-border, a.btn--primary-light-border {
@@ -968,7 +963,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -976,9 +971,9 @@ input[type="reset"]:hover {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
-  color: #a7f6d4;
-  border-color: #a7f6d4;
-  border-radius: 10px;
+  color: #6680b0;
+  border-color: #6680b0;
+  border-radius: 4px;
 }
 
 .btn--primary-light-border:focus, a.btn--primary-light-border:focus {
@@ -990,7 +985,7 @@ input[type="reset"]:hover {
 }
 
 .btn--primary-light-border:hover, a.btn--primary-light-border:hover {
-  background: #a7f6d4;
+  background: #6680b0;
   color: #ffffff;
 }
 
@@ -1000,7 +995,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1010,7 +1005,7 @@ input[type="reset"]:hover {
   background: #64a5f9;
   color: #ffffff;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--secondary:focus, a.btn--secondary:focus {
@@ -1032,7 +1027,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1042,7 +1037,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #64a5f9;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--secondary-border:focus, a.btn--secondary-border:focus {
@@ -1064,7 +1059,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1074,7 +1069,7 @@ input[type="reset"]:hover {
   background: #1a7af6;
   color: #ffffff;
   border-color: #1a7af6;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--secondary-dark:focus, a.btn--secondary-dark:focus {
@@ -1096,7 +1091,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1106,7 +1101,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #1a7af6;
   border-color: #1a7af6;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--secondary-dark-border:focus, a.btn--secondary-dark-border:focus {
@@ -1128,7 +1123,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1138,7 +1133,7 @@ input[type="reset"]:hover {
   background: #aed0fc;
   color: #ffffff;
   border-color: #aed0fc;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--secondary-light:focus, a.btn--secondary-light:focus {
@@ -1160,7 +1155,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1170,7 +1165,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #aed0fc;
   border-color: #aed0fc;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--secondary-light-border:focus, a.btn--secondary-light-border:focus {
@@ -1192,7 +1187,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1202,7 +1197,7 @@ input[type="reset"]:hover {
   background: #f3878d;
   color: #ffffff;
   border-color: #f3878d;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--third:focus, a.btn--third:focus {
@@ -1224,7 +1219,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1234,7 +1229,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #f3878d;
   border-color: #f3878d;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--third-border:focus, a.btn--third-border:focus {
@@ -1256,7 +1251,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1266,7 +1261,7 @@ input[type="reset"]:hover {
   background: #ec414b;
   color: #ffffff;
   border-color: #ec414b;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--third-dark:focus, a.btn--third-dark:focus {
@@ -1288,7 +1283,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1298,7 +1293,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #ec414b;
   border-color: #ec414b;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--third-dark-border:focus, a.btn--third-dark-border:focus {
@@ -1320,7 +1315,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1330,7 +1325,7 @@ input[type="reset"]:hover {
   background: #facdcf;
   color: #ffffff;
   border-color: #facdcf;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--third-light:focus, a.btn--third-light:focus {
@@ -1352,7 +1347,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1362,7 +1357,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #facdcf;
   border-color: #facdcf;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--third-light-border:focus, a.btn--third-light-border:focus {
@@ -1384,7 +1379,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1394,7 +1389,7 @@ input[type="reset"]:hover {
   background: #ffffff;
   color: #ffffff;
   border-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #777777;
 }
 
@@ -1421,7 +1416,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1431,7 +1426,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #ffffff;
   border-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--white-border:focus, a.btn--white-border:focus {
@@ -1457,7 +1452,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1467,7 +1462,7 @@ input[type="reset"]:hover {
   background: #aaaaaa;
   color: #ffffff;
   border-color: #aaaaaa;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--neutral:focus, a.btn--neutral:focus {
@@ -1489,7 +1484,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1499,7 +1494,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #aaaaaa;
   border-color: #aaaaaa;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--neutral-border:focus, a.btn--neutral-border:focus {
@@ -1521,7 +1516,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1531,7 +1526,7 @@ input[type="reset"]:hover {
   background: #64a5f9;
   color: #ffffff;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--danger:focus, a.btn--danger:focus {
@@ -1553,7 +1548,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1563,7 +1558,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #64a5f9;
   border-color: #64a5f9;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .btn--danger-border:focus, a.btn--danger-border:focus {
@@ -1586,17 +1581,17 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
-  background: #bef9e0;
+  background: #778eb9;
   color: #ffffff;
-  border-color: #bef9e0;
-  border-radius: 10px;
+  border-color: #778eb9;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1612,14 +1607,14 @@ input[type="reset"]:hover {
 
 .btn--primary-disabled:hover, a.btn--primary-disabled:hover,
 .btn--primary:disabled:hover, a.btn--primary:disabled:hover {
-  background: #edfdf6;
-  border-color: #edfdf6;
+  background: #99aaca;
+  border-color: #99aaca;
 }
 
 .btn--primary-disabled:hover, a.btn--primary-disabled:hover,
 .btn--primary:disabled:hover, a.btn--primary:disabled:hover {
-  background: #bef9e0;
-  border-color: #bef9e0;
+  background: #778eb9;
+  border-color: #778eb9;
 }
 
 .btn--secondary-disabled, a.btn--secondary-disabled,
@@ -1629,7 +1624,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1639,7 +1634,7 @@ input[type="reset"]:hover {
   background: #d0e4fd;
   color: #ffffff;
   border-color: #d0e4fd;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1672,7 +1667,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1682,7 +1677,7 @@ input[type="reset"]:hover {
   background: #fdedee;
   color: #ffffff;
   border-color: #fdedee;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1717,7 +1712,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1727,7 +1722,7 @@ input[type="reset"]:hover {
   background: #e2e2e2;
   color: #ffffff;
   border-color: #e2e2e2;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1768,7 +1763,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1776,9 +1771,9 @@ input[type="reset"]:hover {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
-  color: #bef9e0;
-  border-color: #bef9e0;
-  border-radius: 10px;
+  color: #778eb9;
+  border-color: #778eb9;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1794,14 +1789,14 @@ input[type="reset"]:hover {
 
 .btn--primary-border-disabled:hover, a.btn--primary-border-disabled:hover,
 .btn--primary-border:disabled:hover, a.btn--primary-border:disabled:hover {
-  background: #bef9e0;
+  background: #778eb9;
   color: #ffffff;
 }
 
 .btn--primary-border-disabled:hover, a.btn--primary-border-disabled:hover,
 .btn--primary-border:disabled:hover, a.btn--primary-border:disabled:hover {
   background: transparent;
-  color: #bef9e0;
+  color: #778eb9;
 }
 
 .btn--secondary-border-disabled, a.btn--secondary-border-disabled,
@@ -1811,7 +1806,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1821,7 +1816,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #d0e4fd;
   border-color: #d0e4fd;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1854,7 +1849,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1864,7 +1859,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #fdedee;
   border-color: #fdedee;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1899,7 +1894,7 @@ input[type="reset"]:hover {
   text-transform: uppercase;
   border: 1px solid;
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -1909,7 +1904,7 @@ input[type="reset"]:hover {
   background: transparent;
   color: #e2e2e2;
   border-color: #e2e2e2;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: initial;
 }
 
@@ -1948,6 +1943,43 @@ input[type="reset"]:hover {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+}
+
+.border-bottom-from-left {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #222d42;
+  position: relative;
+}
+
+.border-bottom-from-left span {
+  position: relative;
+}
+
+.border-bottom-from-left::before {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-bottom: 2px solid #ffffff;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.border-bottom-from-left:hover {
+  text-decoration: none;
+}
+
+.border-bottom-from-left:hover::before {
+  left: 0;
+  width: 100%;
 }
 
 .left {
@@ -2123,7 +2155,7 @@ input[type="reset"]:hover {
   height: 100%;
   overflow: scroll;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(17, 22, 32, 0.95);
   z-index: 9;
   display: flex;
   justify-content: center;
@@ -2149,7 +2181,7 @@ input[type="reset"]:hover {
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 4px;
   background: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -2236,6 +2268,8 @@ input[type="reset"]:hover {
   color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 1.1em;
+  font-size: 1.1rem !important;
 }
 
 .main-nav .menu-header {
@@ -2247,9 +2281,11 @@ input[type="reset"]:hover {
   margin: 0 8px;
   color: #ffffff;
   text-transform: uppercase;
-  font-family: "Overpass", sans-serif;
-  font-size: 0.9em;
-  font-size: 0.9rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.8em;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .main-nav-link:hover, .main-nav-link.active, .main-nav a:hover, .main-nav a.active {
@@ -2261,31 +2297,14 @@ input[type="reset"]:hover {
   background: #ffffff;
   color: #1a7af6;
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .main-nav.sticky {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #aed0fc;
-}
-
-.main-nav.sticky-link, .main-nav.sticky a {
-  color: #64a5f9;
-}
-
-.main-nav.sticky-link:hover, .main-nav.sticky a:hover {
-  color: #1a7af6;
-}
-
-.main-nav.sticky-link.download-theme, .main-nav.sticky a.download-theme {
-  background: #1a7af6;
-  color: #ffffff;
-}
-
-.main-nav.sticky-link.active, .main-nav.sticky a.active {
-  color: #1a7af6;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #333333;
 }
 
 .mobile-menu-button {
@@ -2320,14 +2339,76 @@ input[type="reset"]:hover {
   }
 }
 
+.footer {
+  background: #dddddd;
+  padding: 25px 0 0;
+  color: #777777;
+}
+
+.footer-nav {
+  padding: 0 25px;
+  text-align: center;
+}
+
+.footer-nav-link {
+  color: inherit;
+}
+
+.footer-main {
+  text-align: center;
+  padding: 0 25px 25px;
+}
+
+.footer-main .social-media-links a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.footer-main .social-media-links svg {
+  width: 20px;
+}
+
+.footer-legal {
+  text-align: center;
+  font-size: 0.85em;
+  font-size: 0.85rem;
+  padding: 25px;
+  background: #888888;
+  color: #ffffff;
+}
+
 .splash {
   position: relative;
-  background: linear-gradient(-45deg, #aed0fc, #1a7af6);
-  min-height: 95vh;
+  background-image: url("../img/home-banner-1.jpg");
+  background-size: cover;
+  background-repeat: no repeat;
+  background-position: center;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.splash .plx-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.splash .plx-background img {
+  width: 100%;
+}
+
+.splash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
 }
 
 .splash-content {
@@ -2358,15 +2439,30 @@ input[type="reset"]:hover {
 }
 
 .splash-tagline {
-  font-family: "Heebo", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   font-size: 1.2em;
   font-size: 1.2rem;
   color: #dfecfe;
 }
 
-.splash-cta:hover {
-  text-decoration: none;
+.splash-tagline .tagline-piece {
+  display: inline-block;
+}
+
+.splash-tagline span.tagline-piece {
+  color: #c6defd;
+}
+
+.splash-cta a {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-size: 1.1rem;
+  padding-bottom: 15px;
+  margin-top: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .splash-scroll-down {
@@ -2406,5 +2502,16 @@ input[type="reset"]:hover {
     width: auto;
     max-width: none;
     text-align: center;
+  }
+}
+
+@keyframes fadeTaglinePieces {
+  0% {
+    opacity: 0;
+    transform: translateY(50);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

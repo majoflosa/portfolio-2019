@@ -3580,6 +3580,53 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
   k = !1;
 }("undefined" != typeof module && module.exports && "undefined" != typeof global ? global : void 0 || window, "TweenMax");
 
+var BasicPlxBanner =
+/*#__PURE__*/
+function () {
+  function BasicPlxBanner(selectors) {
+    _classCallCheck(this, BasicPlxBanner);
+
+    this.$banner = document.querySelector(selectors.bannerSelector);
+    this.$bannerBg = this.$banner.querySelector(selectors.backgroundSelector);
+    this.bannerHt = this.$banner.offsetHeight;
+    this.bannerBgHt = this.$bannerBg.querySelector(selectors.backgroundImageSelector).offsetHeight;
+    this.initialBannerTop = 0;
+    this.init = this.init.bind(this);
+    this.bindEvents = this.bindEvents.bind(this);
+    this.parallax = this.parallax.bind(this);
+    this.init();
+  }
+  /**
+   * Set initial `top` position of image being used as background,
+   * Bind event listeners to pertinent DOM elements
+   */
+
+
+  _createClass(BasicPlxBanner, [{
+    key: "init",
+    value: function init() {
+      this.$bannerBg.style.top = this.initialBannerTop + 'px';
+      this.bindEvents();
+    }
+  }, {
+    key: "bindEvents",
+    value: function bindEvents() {
+      window.addEventListener('scroll', this.parallax);
+    }
+    /**
+     * Calculate and set new `top` value for banner image based on window scroll position
+     */
+
+  }, {
+    key: "parallax",
+    value: function parallax() {
+      this.$bannerBg.style.top = this.initialBannerTop - window.scrollY * -0.5 + 'px';
+    }
+  }]);
+
+  return BasicPlxBanner;
+}();
+
 var CarouselGallery =
 /*#__PURE__*/
 function () {
@@ -3787,6 +3834,33 @@ function () {
   return FadeInOnscroll;
 }();
 
+window.addEventListener('load', function () {
+  var plxBanner = new BasicPlxBanner({
+    bannerSelector: '.splash',
+    backgroundSelector: '.plx-background',
+    backgroundImageSelector: '.plx-background img'
+  });
+});
+window.addEventListener('load', function () {
+  // const taglineAnimation = new FadeInOnscroll({
+  //     contentSelector: '.landing-services-list',
+  //     fadeInSectionsSelector: '.landing-services-item',
+  //     animationDuration: 1,
+  //     positionShift: 50,
+  //     staggerDelay: 0.3
+  // });
+  var taglinePieces = document.querySelectorAll('.tagline-piece');
+  setTimeout(function () {
+    TweenMax.staggerFromTo(taglinePieces, 0.75, {
+      opacity: 0,
+      y: 10
+    }, {
+      opacity: 1,
+      y: 0
+    }, 0.2);
+  }, 700);
+});
+
 var InfiniteCarousel =
 /*#__PURE__*/
 function () {
@@ -3924,47 +3998,26 @@ function () {
   function LoadingScreen(selector) {
     _classCallCheck(this, LoadingScreen);
 
-    // the element wrapping the loading screen content
     this.$body = document.querySelector('body');
     this.$loadingScreen = this.$body.querySelector(selector);
 
     if (!this.$loadingScreen) {
       console.warn("The provided query selector ".concat(selector, " did not match any elements on the document."));
       return false;
-    } // bind all methods' contexts to created instance
+    }
 
-
-    this.init = this.init.bind(this); // this.simulateLoading = this.simulateLoading.bind( this );
-
-    this.fadeLoadingScreen = this.fadeLoadingScreen.bind(this); // run initial functionality
-
+    this.init = this.init.bind(this);
+    this.fadeLoadingScreen = this.fadeLoadingScreen.bind(this);
     this.init();
   }
 
   _createClass(LoadingScreen, [{
     key: "init",
     value: function init() {
-      // shrink body height to screen size while loading screen is visible
       this.$body.style.height = window.height + 'px';
-      this.$body.style.overflow = 'hidden'; // do not call this method on a real site; this method is just to simulate
-      // loading time on this demo
-      // this.simulateLoading(); // delete/comment this line on your site
-      // un-comment the line below on your site
-      // window.addEventListener( 'load', this.fadeLoadingScreen );
-
+      this.$body.style.overflow = 'hidden';
       this.fadeLoadingScreen();
     }
-    /**
-     * This method is only used to simulate loading time on this demo; do not run it on your site
-     */
-    // simulateLoading() {
-    //     setTimeout( this.fadeLoadingScreen, 4000 );
-    // }
-
-    /**
-     * Add `fulfilled` class to loading screen to trigger the css fadeOut animation
-     */
-
   }, {
     key: "fadeLoadingScreen",
     value: function fadeLoadingScreen() {
@@ -3972,10 +4025,9 @@ function () {
 
       this.$loadingScreen.classList.add('fulfilled');
       this.$body.style.height = 'auto';
-      this.$body.style.overflow = 'initial'; // hide element completely after 1.5 seconds
-
+      this.$body.style.overflow = 'initial';
       setTimeout(function () {
-        _this5.$loadingScreen.style.display = 'none';
+        return _this5.$loadingScreen.style.display = 'none';
       }, 1500);
     }
   }]);
@@ -3985,6 +4037,12 @@ function () {
 
 window.addEventListener('load', function () {
   var loadingScreen = new LoadingScreen('#loading-screen');
+});
+window.addEventListener('unload', function () {
+  var $body = document.querySelector('body');
+  TweenMax.to($body, 0.25, {
+    opacity: 0
+  });
 });
 
 var ModalBox =
