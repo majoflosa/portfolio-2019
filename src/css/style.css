@@ -105,7 +105,7 @@ img {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #222d42;
+  background: #080b10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,8 +170,8 @@ img {
 }
 
 #spinner-3-dots {
-  border: 11px solid #2b3853;
-  background: #2b3853;
+  border: 15px solid #222d42;
+  background: #222d42;
   height: 30px;
   width: 30px;
   margin: 30px auto;
@@ -1951,6 +1951,7 @@ input[type="reset"]:hover {
   border: none;
   border-bottom: 2px solid #222d42;
   position: relative;
+  padding-bottom: 15px;
 }
 
 .border-bottom-from-left span {
@@ -2311,19 +2312,24 @@ input[type="reset"]:hover {
   /* Customize your menu button */
   display: none;
   padding: 8px 12px;
-  background: #ffffff;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .mobile-menu-button svg {
   margin-right: 8px;
+  fill: #ffffff;
+  width: 20px;
 }
 
 @media screen and (max-width: 960px) {
   .main-nav {
     flex-wrap: wrap;
     max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #333333;
   }
   .mobile-menu-button {
     display: inline-block;
@@ -2336,6 +2342,48 @@ input[type="reset"]:hover {
     right: 0px;
     width: 100%;
     box-sizing: border-box;
+  }
+  .main-nav-links.open, .main-nav-links.close {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    background: #080b10;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    animation: fadeInNav 0.3s ease-in-out 1;
+  }
+  .main-nav-links.open .main-nav-link, .main-nav-links.close .main-nav-link {
+    display: block;
+    padding: 15px;
+  }
+  .main-nav-links.close {
+    animation: fadeOutNav 0.5s ease-in-out 1 forwards;
+  }
+}
+
+@keyframes fadeInNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutNav {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    height: 0;
   }
 }
 
