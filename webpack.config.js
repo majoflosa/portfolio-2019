@@ -12,6 +12,7 @@ module.exports = {
         publicPath: '/js/',
         port: 8080,
         watchContentBase: true,
+        compress: true,
         hot: true
     },
     plugins: [ new webpack.HotModuleReplacementPlugin() ],
