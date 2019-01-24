@@ -2439,6 +2439,17 @@ input[type="reset"]:hover {
   color: #3c4f74;
 }
 
+@media screen and (max-width: 600px) {
+  .footer-nav-link, .footer-nav a {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .footer-main-title {
+    font-size: 1.25em;
+    font-size: 1.25rem;
+  }
+}
+
 .splash {
   position: relative;
   background-image: url("../img/home-banner-1.jpg");
@@ -2773,6 +2784,13 @@ input[type="reset"]:hover {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .work-section-item .content h3 {
+    font-size: 1.1em;
+    font-size: 1.1rem;
+  }
+}
+
 .skills-section .page-section-inner {
   max-width: none;
   width: auto;
@@ -3098,6 +3116,22 @@ input[type="reset"]:hover {
 .projects-section-item main p {
   font-size: 1.1em;
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 960px) {
+  .projects-section-list {
+    display: block;
+  }
+  .projects-section-item {
+    width: 90%;
+    margin: 0 auto 50px;
+  }
+  .projects-section-item img {
+    height: auto;
+  }
+  .projects-section-item .project-skill {
+    text-align: center;
+  }
 }
 
 .contact-section {

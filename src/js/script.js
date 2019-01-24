@@ -3785,7 +3785,7 @@ function () {
     value: function init() {
       // make fade-in content invisible
       this.fadeInSections.forEach(function (section) {
-        return section.style.opacity = 0;
+        return section.style.opacity = +(window.outerWidth < 720);
       });
       this.fadeIn(); // bind relevant events
 
@@ -3808,7 +3808,7 @@ function () {
     key: "fadeIn",
     value: function fadeIn() {
       // do nothing if animation already played
-      if (this.contentDisplayed) return false; // check if enough has been scrolled to bring animated content into view
+      if (this.contentDisplayed || window.outerWidth < 720) return false; // check if enough has been scrolled to bring animated content into view
 
       if (this.$element.offsetTop - window.innerHeight + this.elementHt * 0.25 <= window.scrollY) {
         // make note that animation has now played
