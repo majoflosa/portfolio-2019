@@ -1,0 +1,42 @@
+.projects-section
+    background: lighten($lightPrimaryColor, 35%)
+    .page-section-title
+        text-align: center
+        text-transform: uppercase
+    &-list
+        +mainFlex(space-around, stretch)
+    &-item
+        color: $primaryColor
+        background: #ffffff
+        padding: 20px
+        box-sizing: border-box
+        flex: 0 0 30%
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1)
+        +mainFlex(space-between, center, column)
+
+        h3
+            text-align: center
+        &-logo
+            svg, img
+                height: 80px
+                display: block
+                margin: 0 auto
+
+        main
+            .project-skills
+                margin-bottom: 20px
+                display: flex
+                justify-content: space-around
+                flex-wrap: wrap
+            .project-skill
+                flex-grow: 1
+                display: inline-block
+                padding: 4px 8px
+                background: $lightPrimaryColor
+                margin: 0 3px 3px 0
+                font-size: 0.9em
+                font-weight: bold
+                color: #ffffff
+            p
+                font-size: 1.1em
+                font-size: 1.1rem

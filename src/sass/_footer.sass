@@ -1,31 +1,47 @@
 .footer
-    background: #dddddd
-    padding: 25px 0 0
-    color: $primaryFontColor
+    background: $primaryColor
+    padding: 50px 0 0
+    color: #ffffff
     &-nav
         padding: 0 25px
         text-align: center
-        &-link
-            color: inherit
+        &-link, a
+            color: #ffffff
+            display: inline-block
+            margin: 0 10px
 
     &-main
         text-align: center
-        padding: 0 25px 25px
+        padding: 0 25px 50px
+        margin: 50px auto 0
         &-title
-
+            color: #ffffff
+            margin-bottom: 0
+            font-size: 2em
+            font-size: 2rem
+            font-weight: bold
+            text-transform: uppercase
+            letter-spacing: 1.5px
         &-tagline
+            color: #ffffff
+            margin-top: 0
 
         .social-media-links
             a
                 display: inline-block
                 margin: 0 5px
+                &:hover
+                    svg
+                        fill: $lightPrimaryColor
             svg
                 width: 20px
+                fill: #ffffff
+                +mainTransition
 
     &-legal
         text-align: center
         font-size: 0.85em
         font-size: 0.85rem
         padding: 25px
-        background: #888888
-        color: #ffffff
+        background: darken($primaryColor, 8%)
+        color: lighten($primaryColor, 15%)

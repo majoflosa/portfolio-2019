@@ -3835,6 +3835,15 @@ function () {
 }();
 
 window.addEventListener('load', function () {
+  var projectsFadeIn = new FadeInOnscroll({
+    contentSelector: '.projects-section-list',
+    fadeInSectionsSelector: '.projects-section-item',
+    animationDuration: 1,
+    positionShift: 50,
+    staggerDelay: 0.3
+  });
+});
+window.addEventListener('load', function () {
   var servicesFadeIn = new FadeInOnscroll({
     contentSelector: '.services-section-list',
     fadeInSectionsSelector: '.services-section-item',

@@ -1,14 +1,34 @@
 .testimonials-top, .testimonials-bottom
-    fill: $primaryColor
-    margin: 0
+    position: relative
+    // margin: 0
 .testimonials-top
+    fill: #ffffff
+    margin-bottom: 30px
+.testimonials-bottom
+    fill: lighten($lightPrimaryColor, 35%)
+    margin-top: 30px
     margin-bottom: -6px
 .testimonials-section
-    padding: 60px 30px 40px
-    background: $primaryColor
+    padding: 0
+    background-image: url('../img/studio-office.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    background-attachment: fixed
+    position: relative
+
+    .page-section-overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba($primaryColor, 0.85)
+
     &-item
         &-content
             position: relative
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.7)
             p
                 position: relative
                 z-index: 1
