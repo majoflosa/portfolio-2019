@@ -1,4 +1,6 @@
-class SlideshowFade {
+import TweenMax from 'gsap/TweenMax';
+
+export default class SlideshowFade {
     constructor( options ) {
         this.$wrapper = document.querySelector( options.wrapperSelector );
         if ( !this.$wrapper ) {

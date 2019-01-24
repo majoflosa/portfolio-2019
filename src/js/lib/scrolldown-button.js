@@ -1,4 +1,8 @@
-class ScrollDownButton {
+import { TweenLite, ScrollToPlugin } from 'gsap/all';
+
+const plugins = [ScrollToPlugin];
+
+export default class ScrollDownButton {
     constructor( options ) {
         this.$button = document.querySelector( options.buttonSelector );
         this.$currentSection = document.querySelector( options.currentSectionSelector );
@@ -30,10 +34,10 @@ class ScrollDownButton {
     }
 }
 
-window.addEventListener('load', () => {
-    const scrollDownButton = new ScrollDownButton({
-        buttonSelector: '.scroll-down-button',
-        currentSectionSelector: '.splash',
-        animationDuration: 1.25 // seconds
-    });
-});
+// window.addEventListener('load', () => {
+//     const scrollDownButton = new ScrollDownButton({
+//         buttonSelector: '.scroll-down-button',
+//         currentSectionSelector: '.splash',
+//         animationDuration: 1.25 // seconds
+//     });
+// });

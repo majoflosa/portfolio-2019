@@ -1,4 +1,4 @@
-class StickyNav {
+export default class StickyNav {
     constructor( options ) {
         // nav element
         this.$nav = document.querySelector( options.navSelector );
@@ -85,14 +85,14 @@ class StickyNav {
 }
 
 // instantiate the component
-window.addEventListener('load', function() {
-    const stickyNav = new StickyNav({
-        navSelector: '.main-nav',
-        mainWrapSelector: '.page-wrap',
-        stickyClass: 'sticky',
-        menuButtonSelector: '.mobile-menu-button',
-        menuSelector: '.main-nav-links',
-        openMenuClass: 'open',
-        closeMenuClass: 'close'
-    });
-});
+// window.addEventListener('load', function() {
+//     const stickyNav = new StickyNav({
+//         navSelector: '.main-nav',
+//         mainWrapSelector: '.page-wrap',
+//         stickyClass: 'sticky',
+//         menuButtonSelector: '.mobile-menu-button',
+//         menuSelector: '.main-nav-links',
+//         openMenuClass: 'open',
+//         closeMenuClass: 'close'
+//     });
+// });

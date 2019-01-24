@@ -1,4 +1,4 @@
-class LayeredPlxBanner {
+export default class LayeredPlxBanner {
     constructor( elements ) {
         this.elements = elements;
 

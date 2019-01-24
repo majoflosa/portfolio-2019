@@ -1,4 +1,6 @@
-class InfiniteCarousel {
+import TweenMax from 'gsap/TweenMax';
+
+export default class InfiniteCarousel {
     constructor( options ) {
         this.$wrap = document.querySelector( options.wrapSelector );
         if ( !this.$wrap ) {

@@ -1,4 +1,6 @@
-class CarouselGallery {
+import TweenMax from 'gsap/TweenMax';
+
+export default class CarouselGallery {
     constructor( options ) {
         this.$outerWrapper = document.querySelector( options.outerWrapperSelector );
         if ( !this.$outerWrapper ) {

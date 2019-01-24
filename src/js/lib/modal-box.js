@@ -1,4 +1,4 @@
-class ModalBox {
+export default class ModalBox {
     constructor( options ) {
         this.$modal = document.querySelector( options.wrapperSelector );
         if ( !this.$modal ) {
@@ -35,11 +35,11 @@ class ModalBox {
         event.preventDefault();
         
         if ( this.displaying ) {
-            this.$modal.classList.remove( 'showing' );
-            this.$modal.classList.add( 'hidden' );
+            this.$modal.classList.remove( this.visibleClass );
+            this.$modal.classList.add( this.hiddenClass );
         } else {
-            this.$modal.classList.remove( 'hidden' );
-            this.$modal.classList.add( 'showing' );
+            this.$modal.classList.remove( this.hiddenClass );
+            this.$modal.classList.add( this.visibleClass );
         }
 
         this.displaying = !this.displaying;

@@ -1,4 +1,6 @@
-class FadeInOnscroll {
+import TweenMax from 'gsap/TweenMax';
+
+export default class FadeInOnscroll {
     constructor( options ) {
         // the element that wraps content with fade in effect
         this.$element = document.querySelector( options.contentSelector );

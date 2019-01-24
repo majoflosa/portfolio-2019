@@ -1,4 +1,4 @@
-class LoadingScreen {
+export default class LoadingScreen {
     constructor( selector ) {
         this.$body = document.querySelector('body');
         this.$loadingScreen = this.$body.querySelector( selector );
@@ -29,11 +29,8 @@ class LoadingScreen {
     }
 }
 
-window.addEventListener('load', () => {
-    const loadingScreen = new LoadingScreen( '#loading-screen' );
-});
 
-window.addEventListener('unload', () => {
-    const $body = document.querySelector('body');
-    TweenMax.to( $body, 0.25, {opacity: 0} );
-});
+// window.addEventListener('unload', () => {
+//     const $body = document.querySelector('body');
+//     TweenMax.to( $body, 0.25, {opacity: 0} );
+// });
