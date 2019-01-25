@@ -27,6 +27,8 @@ export default class StickyNav {
         window.addEventListener( 'scroll', this.stick );
         window.addEventListener( 'resize', this.disableStick );
         this.$menuButton.addEventListener( 'click', this.toggleMenu );
+
+        this.stick();
     }
     
     stick() {

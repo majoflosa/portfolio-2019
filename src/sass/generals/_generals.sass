@@ -19,36 +19,36 @@ a:hover
     text-decoration: underline
     color: $lightSecondaryColor
 
-code
-    background: $lightGrey
-    color: darken($midGrey, 15%)
-    padding: 8px 14px
-    border-radius: $boxRadius
-    &, pre
-        font-family: 'Roboto Mono', monospace
-        font-size: 0.9em
-        font-size: 0.9rem
-.code-block
-    display: block
+// code
+//     background: $lightGrey
+//     color: darken($midGrey, 15%)
+//     padding: 8px 14px
+//     border-radius: $boxRadius
+//     &, pre
+//         font-family: 'Roboto Mono', monospace
+//         font-size: 0.9em
+//         font-size: 0.9rem
+// .code-block
+//     display: block
 
 img
     display: block
     max-width: 100%
 .img-block
     width: 100%
-.img-left
-    float: left
-    margin: 0 20px 20px 0
-.img-right
-    float: right
-    margin: 0 0 20px 20px
-.img-center
-    display: block
-    margin: 0 auto
+// .img-left
+//     float: left
+//     margin: 0 20px 20px 0
+// .img-right
+//     float: right
+//     margin: 0 0 20px 20px
+// .img-center
+//     display: block
+//     margin: 0 auto
 .img-round
     border-radius: 999px
 
-strong
+// strong
     // color: darken($primaryFontColor, 10%)
 
 .separator-title
@@ -80,11 +80,7 @@ strong
 
     &.fulfilled
         overflow: hidden
-        animation-name: fadeOut
-        animation-duration: 0.5s
-        animation-iteration-count: 1
-        animation-timing-function: ease-in-out
-        animation-fill-mode: forwards
+        animation: fadeOut 0.5s ease-in-out 1 forwards
         animation-delay: 0.3s
 
         .loading-message
@@ -112,11 +108,7 @@ strong
     text-align: center
     position: relative
     transform: scale(0.7)
-    animation-name: spinner3dots
-    animation-duration: 3.3s
-    animation-timing-function: ease-in-out
-    animation-direction: alternate
-    animation-iteration-count: infinite
+    animation: spinner3dots 3.3s ease-in-out infinite alternate
 
     .dot
         position: absolute
@@ -127,16 +119,13 @@ strong
         transform-origin: center
         background: #ffffff
     .dot-1
-        // background: $primaryColor
         transform: translate(-50%, -10px)
 
     .dot-2
-        // background: $secondaryColor
         left: -7px
         transform: translate(0, 200%)
 
     .dot-3
-        // background: $thirdColor
         right: -7px
         transform: translate(0, 200%)
 
@@ -152,31 +141,31 @@ strong
     box-sizing: border-box
 
 
-.bullet-check-circle-primary
-    +checkmark($lightPrimaryColor, $primaryColor, 99px)
-.bullet-check-circle-secondary
-    +checkmark($lightSecondaryColor, $secondaryColor, 99px)
-.bullet-check-circle-third
-    +checkmark($thirdColor, $darkThirdColor, 99px)
+// .bullet-check-circle-primary
+//     +checkmark($lightPrimaryColor, $primaryColor, 99px)
+// .bullet-check-circle-secondary
+//     +checkmark($lightSecondaryColor, $secondaryColor, 99px)
+// .bullet-check-circle-third
+//     +checkmark($thirdColor, $darkThirdColor, 99px)
 
-.bullet-check-square-primary
-    +checkmark($lightPrimaryColor, $primaryColor, 3px)
-.bullet-check-square-secondary
-    +checkmark($lightSecondaryColor, $secondaryColor, 3px)
-.bullet-check-square-third
-    +checkmark($thirdColor, $darkThirdColor, 3px)
+// .bullet-check-square-primary
+//     +checkmark($lightPrimaryColor, $primaryColor, 3px)
+// .bullet-check-square-secondary
+//     +checkmark($lightSecondaryColor, $secondaryColor, 3px)
+// .bullet-check-square-third
+//     +checkmark($thirdColor, $darkThirdColor, 3px)
 
-.bullet-x-circle-primary
-    +xmark($lightPrimaryColor, $primaryColor, 99px)
-.bullet-x-circle-secondary
-    +xmark($lightSecondaryColor, $secondaryColor, 99px)
-.bullet-x-circle-third
-    +xmark($thirdColor, $darkThirdColor, 99px)
+// .bullet-x-circle-primary
+//     +xmark($lightPrimaryColor, $primaryColor, 99px)
+// .bullet-x-circle-secondary
+//     +xmark($lightSecondaryColor, $secondaryColor, 99px)
+// .bullet-x-circle-third
+//     +xmark($thirdColor, $darkThirdColor, 99px)
 
-.bullet-x-square-primary
-    +xmark($lightPrimaryColor, $primaryColor, 3px)
-.bullet-x-square-secondary
-    +xmark($lightSecondaryColor, $secondaryColor, 3px)
-.bullet-x-square-third
-    +xmark($thirdColor, $darkThirdColor, 3px)
+// .bullet-x-square-primary
+//     +xmark($lightPrimaryColor, $primaryColor, 3px)
+// .bullet-x-square-secondary
+//     +xmark($lightSecondaryColor, $secondaryColor, 3px)
+// .bullet-x-square-third
+//     +xmark($thirdColor, $darkThirdColor, 3px)
 
