@@ -1,0 +1,96 @@
+.client
+    .page-section-inner
+        max-width: none
+        width: auto
+        margin: 5%
+    .main-section
+        padding-bottom: 0
+        &-intro
+            width: 90%
+            max-width: 1000px
+            margin: 0 auto 75px
+            text-align: center
+            font-size: 1.2em
+        &-list
+            +mainFlex(flex-start, stretch)
+            flex-wrap: wrap
+            overflow: hidden
+
+        &-item
+            flex: 0 0 32%
+            margin: 0.5%
+            box-sizing: border-box
+            // padding: 2px
+            background: #fafafa
+            position: relative
+            overflow: hidden
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+
+            &-link
+                display: block
+                position: relative
+                // z-index: 1
+            &-caption
+                position: absolute
+                bottom: 0
+                left: 0
+                z-index: 0
+                width: 100%
+                height: 100%
+                box-sizing: border-box
+                // background: linear-gradient(to bottom, transparent, rgba($primaryColor, 0.9) 80%, $primaryColor 100%)
+                background: rgba($primaryColor, 0.9)
+                padding: 30px
+                opacity: 0
+                +mainFlex(center, stretch, column)
+                // flex-wrap: wrap
+                transform: translateY(30px)
+                +mainTransition(all, 0.25s, ease-out)
+                h3
+                    color: #ffffff
+                    text-transform: uppercase
+                    margin-top: 0
+                p
+                    color: #ffffff
+                    font-size: 1.1em
+                    font-size: 1.1rem
+                a
+                    max-width: 250px
+                    margin-bottom: 3px
+            &:hover 
+                .main-section-item-caption
+                    opacity: 1
+                    transform: translateY(0)
+
+@media screen and (max-width: 960px)
+    .client .main-section
+        &-list
+        &-item
+            flex: 0 0 49%
+            &-caption
+                z-index: 2
+                p
+                    font-size: 1em
+                    font-size: 1rem
+
+@media screen and (max-width: 720px)
+    .client .main-section
+        &-list
+            justify-content: center
+        &-item
+            flex: 0 0 67%
+
+@media screen and (max-width: 545px)
+    .client .main-section
+        &-list
+            justify-content: center
+        &-item
+            flex: 0 0 90%
+            margin-bottom: 30px
+
+            &-caption
+                position: initial
+                height: auto
+                display: block
+                opacity: 1
+                transform: translateY(0)

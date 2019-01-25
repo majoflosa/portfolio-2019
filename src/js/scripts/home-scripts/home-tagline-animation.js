@@ -10,7 +10,7 @@ export default function homeTagline() {
         }
         
         [...taglinePieces].forEach( piece => piece.style.opacity = 0);
-        // setTimeout( () => {
+        setTimeout( () => {
             TweenMax.staggerFromTo( 
                 taglinePieces, 
                 0.75, 
@@ -18,7 +18,7 @@ export default function homeTagline() {
                 { opacity: 1, y: 0 },
                 0.2
             );
-        // }, 100);
+        }, 100);
     });
     
 }
