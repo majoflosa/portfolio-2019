@@ -1,4 +1,4 @@
-import ScrollDownButton from '../lib/scrolldown-button';
+import ScrollDownButton from '../../lib/scrolldown-button';
 
 export default function splashScroll() {
 

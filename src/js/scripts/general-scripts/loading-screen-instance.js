@@ -1,4 +1,4 @@
-import LoadingScreen from '../lib/loading-screen';
+import LoadingScreen from '../../lib/loading-screen';
 
 export default function createLoadingScreen() {
 

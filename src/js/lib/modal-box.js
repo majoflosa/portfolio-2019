@@ -13,11 +13,10 @@ export default class ModalBox {
         this.displaying = false;
         
         this.setTogglers = this.setTogglers.bind( this );
-        this.bindEvents = this.bindEvents.bind( this );
         this.toggleModal = this.toggleModal.bind( this );
         
         this.setTogglers( options.togglerSelectors );
-        this.bindEvents();
+        this.$togglers.forEach( $toggler => $toggler.addEventListener('click', this.toggleModal) );
     }
 
     setTogglers( selectors ) {
@@ -25,10 +24,6 @@ export default class ModalBox {
             let $toggler = document.querySelectorAll( selectors[i] );
             if ( $toggler ) this.$togglers.push( ...$toggler );
         } 
-    }
-
-    bindEvents() {
-        this.$togglers.forEach( $toggler => $toggler.addEventListener('click', this.toggleModal) );
     }
 
     toggleModal( event ) {

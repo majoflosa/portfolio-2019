@@ -1,8 +1,6 @@
 export default class StickyNav {
     constructor( options ) {
-        // nav element
         this.$nav = document.querySelector( options.navSelector );
-        // wrapper element for all content under nav
         this.$mainWrap = document.querySelector( options.mainWrapSelector );
         if ( !this.$mainWrap ) {
             console.warn( `The provided query selector ${options.mainWrapSelector} did not match any elements on the document.` );
@@ -10,12 +8,9 @@ export default class StickyNav {
         }
         this.$splash = this.$mainWrap.querySelector( '.splash' );
 
-        // Y coordinate of point where nav should become sticky
         this.stickPoint = 0 //this.$splash.offsetHeight - this.$nav.offsetHeight;
-        // css class to add to make the nav bar stick
         this.stickyClass = options.stickyClass;
 
-        // track whether or not the nav has is in the sticky state
         this.isSticky = false;
 
         this.$menuButton = document.querySelector( options.menuButtonSelector );
@@ -24,22 +19,11 @@ export default class StickyNav {
         this.closeMenuClass = options.closeMenuClass;
 
         // bind context of all methods to current instance
-        this.init = this.init.bind( this );
-        this.bindEvents = this.bindEvents.bind( this );
         this.stick = this.stick.bind( this );
         this.toggleMenu = this.toggleMenu.bind( this );
         this.disableStick = this.disableStick.bind( this );
 
         // run all initial functionality
-        this.init();
-    }
-
-    init() {
-        this.bindEvents();
-    }
-    
-    bindEvents() {
-        // set up listener for scroll event
         window.addEventListener( 'scroll', this.stick );
         window.addEventListener( 'resize', this.disableStick );
         this.$menuButton.addEventListener( 'click', this.toggleMenu );

@@ -1,4 +1,4 @@
-import TweenMax from 'gsap/TweenMax';
+// import TweenMax from 'gsap/TweenMax';
 
 export default class InfiniteCarousel {
     constructor( options ) {
@@ -17,21 +17,11 @@ export default class InfiniteCarousel {
         this.playInterval = null;
         this.currentIndex = 0;
 
-        this.init = this.init.bind( this );
-        this.bindEvents = this.bindEvents.bind( this );
         this.playCarousel = this.playCarousel.bind( this );
         this.nextItem = this.nextItem.bind( this );
         this.previousItem = this.previousItem.bind( this );
 
-        this.init();
-    }
-
-    init() {
         this.$items.forEach( item => this.$innerWrap.appendChild(item.cloneNode(true)) );
-        this.bindEvents();
-    }
-
-    bindEvents() {
         this.playCarousel();
     }
 
@@ -51,7 +41,7 @@ export default class InfiniteCarousel {
         this.currentIndex++;
     }
 
-    previousItem() {
+    // previousItem() {
 
-    }
+    // }
 }

@@ -1,4 +1,4 @@
-import BasicPlxBanner from '../lib/basic-plx';
+import BasicPlxBanner from '../../lib/basic-plx';
 
 export default function homeSplashPlx() {
 

@@ -1,6 +1,6 @@
-import { TweenLite, ScrollToPlugin } from 'gsap/all';
+// import { TweenLite, ScrollToPlugin } from 'gsap/all';
 
-const plugins = [ScrollToPlugin];
+// const plugins = [ScrollToPlugin];
 
 export default class ScrollDownButton {
     constructor( options ) {
@@ -10,22 +10,11 @@ export default class ScrollDownButton {
             console.warn( `The provided query selector ${options.buttonSelector} did not match any elements on the document.` );
             return false;
         }
-        
 
         this.animationDuration = options.animationDuration || 2;
 
-        this.init = this.init.bind( this );
-        this.bindEvents = this.bindEvents.bind( this );
         this.scrollDown = this.scrollDown.bind( this );
 
-        this.init();
-    }
-
-    init() {
-        this.bindEvents();
-    }
-
-    bindEvents() {
         this.$button.addEventListener('click', this.scrollDown );
     }
 

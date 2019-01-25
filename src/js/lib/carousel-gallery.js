@@ -1,4 +1,4 @@
-import TweenMax from 'gsap/TweenMax';
+// import TweenMax from 'gsap/TweenMax';
 
 export default class CarouselGallery {
     constructor( options ) {
@@ -16,15 +16,10 @@ export default class CarouselGallery {
         this.bulletClass = options.bulletSelector;
         this.animationDuration = options.animationDuration === undefined ? 0.5 : options.animationDuration;
 
-        this.init = this.init.bind( this );
         this.bindEvents = this.bindEvents.bind( this );
         this.shiftCarousel = this.shiftCarousel.bind( this );
         this.calculateSizes = this.calculateSizes.bind( this );
 
-        this.init();
-    }
-
-    init() {
         this.calculateSizes();
         this.bindEvents();
     }

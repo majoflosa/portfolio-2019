@@ -1,4 +1,4 @@
-import StickyNav from '../lib/sticky-nav';
+import StickyNav from '../../lib/sticky-nav';
 
 export default function nav() {
 

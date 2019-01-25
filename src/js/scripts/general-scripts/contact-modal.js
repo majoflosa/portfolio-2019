@@ -1,4 +1,4 @@
-import ModalBox from '../lib/modal-box';
+import ModalBox from '../../lib/modal-box';
 
 export default function contactModal() {
 

@@ -1,4 +1,4 @@
-import FadeInOnscroll from '../lib/fade-in-onscroll-multiple';
+import FadeInOnscroll from '../../lib/fade-in-onscroll-multiple';
 
 export default function homeProjectsFadeIn() {
 
