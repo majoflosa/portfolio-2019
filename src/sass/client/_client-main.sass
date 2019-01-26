@@ -15,8 +15,6 @@
             +mainFlex(flex-start, stretch)
             flex-wrap: wrap
             overflow: hidden
-            max-width: 1340px
-            margin: o auto
 
         &-item
             flex: 0 0 32%
@@ -26,7 +24,6 @@
             background: #fafafa
             position: relative
             overflow: hidden
-            max-width: 442px
             box-shadow: 0 2px 5px rgba(0,0,0,0.1)
 
             &-link
@@ -48,7 +45,7 @@
                 +mainFlex(center, stretch, column)
                 // flex-wrap: wrap
                 transform: translateY(30px)
-                +mainTransition(all, 0.4s, ease-out)
+                +mainTransition(all, 0.25s, ease-out)
                 h3
                     color: #ffffff
                     text-transform: uppercase
@@ -60,20 +57,10 @@
                 a
                     max-width: 250px
                     margin-bottom: 3px
-                    svg
-                        width: 20px
-                        margin-left: 8px
-                        fill: #ffffff
-                        vertical-align: top
-                        +mainTransition
-                    &:hover
-                        svg
-                            fill: $primaryColor
             &:hover 
                 .main-section-item-caption
                     opacity: 1
                     transform: translateY(0)
-
 
 @media screen and (max-width: 960px)
     .client .main-section

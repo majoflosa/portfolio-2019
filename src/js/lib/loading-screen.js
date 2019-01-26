@@ -7,12 +7,16 @@ export default class LoadingScreen {
             return false;
         }
 
+        this.init = this.init.bind( this );
         this.fadeLoadingScreen = this.fadeLoadingScreen.bind( this );
 
+        this.init();
+    }
+
+    init() {
         this.$body.style.height = window.height + 'px';
         this.$body.style.overflow = 'hidden';
-        
-        window.addEventListener( 'load', () => this.fadeLoadingScreen() );
+        this.fadeLoadingScreen();
     }
 
     fadeLoadingScreen() {
