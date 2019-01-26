@@ -2,8 +2,10 @@ import LoadingScreen from '../../lib/loading-screen';
 
 export default function createLoadingScreen() {
 
-    // window.addEventListener('load', () => {
-        const loadingScreen = new LoadingScreen( '#loading-screen' );
-    // });
+    const environment = process.env.NODE_ENV || 'production';
+    if ( environment === 'development' ) 
+        return document.body.removeChild( document.querySelector( '#loading-screen' ) );
+    
+    const loadingScreen = new LoadingScreen( '#loading-screen' );
 
 }
