@@ -15,7 +15,7 @@ export default class InfiniteCarousel {
 
 
         this.timeInterval = options.timeInterval || 5000;
-        this.transitionDuration = options.transitionDuration || 0.4;
+        this.transitionDuration = options.transitionDuration || 0.6;
         this.playInterval = null;
         this.currentIndex = 0;
 

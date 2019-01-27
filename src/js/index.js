@@ -31,5 +31,7 @@ clientProjectsFadeIn();
 
 // Personal Project page scripts
 import projectsFoliocliqueCarousel from './scripts/projects-scripts/projects-fc-carousel';
+import projectsAnimatedRing from './scripts/projects-scripts/projects-animated-ring';
 
 projectsFoliocliqueCarousel();
+projectsAnimatedRing();
