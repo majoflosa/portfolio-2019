@@ -1,0 +1,273 @@
+/* Spinner Momentum dots */
+#spinner-momentum
+    height: 50px
+    // width: 50px
+    margin: 30px auto
+    text-align: center
+    overflow: hidden
+
+    .spinner
+        display: inline-block
+        border: 10px solid transparent
+        height: 30px
+        width: 30px
+        border-radius: 50%
+        text-align: center
+        position: relative
+        transform-origin: center
+        animation-name: momentumSpin
+        animation-duration: 2.7s
+        animation-timing-function: ease-in-out
+        animation-iteration-count: infinite
+    .spinner-1
+        left: 100px
+        .dot
+            transform: translate(0, -10px)
+    .spinner-2
+        left: 50px
+        animation-delay: 0.25s
+        .dot
+            transform: translate(0, -10px)
+    .spinner-3
+        animation-delay: 0.5s
+        .dot
+            transform: translate(0, -10px)
+    .spinner-4
+        right: 50px
+        animation-delay: 0.75s
+        .dot
+            transform: translate(0, -10px)
+    .spinner-5
+        right: 100px
+        animation-delay: 1s
+        .dot
+            transform: translate(0, -10px)
+
+    .dot
+        position: absolute
+        display: inline-block
+        background: $lightPrimaryColor
+        height: 10px
+        width: 10px
+        border-radius: 50%
+        transform-origin: center
+
+@keyframes momentumSpin
+    0%
+        transform: rotate(0)
+    65%
+        transform: rotate(355deg)
+    75%
+        transform: rotate(360deg)
+    100%
+        transform: rotate(360deg)
+
+
+/* Jumping Dots */
+#jumper-dots
+    text-align: center
+    margin: 30px auto
+
+    .jumper-dot
+        display: inline-block
+        margin: 0 3px
+        width: 15px
+        height: 15px
+        background: $lightPrimaryColor
+        border-radius: 50%
+        animation-name: jumperDots
+        animation-duration: 2.3s
+        animation-timing-function: ease-in
+        animation-iteration-count: infinite
+    .jumper-dot-2
+        animation-delay: 0.15s
+    .jumper-dot-3
+        animation-delay: 0.3s
+
+@keyframes jumperDots
+    0%
+        transform: translateY(0)
+    10%
+        transform: translateY(-23px)
+    12%
+        transform: translateY(-25px)
+    14%
+        transform: translateY(-23px)
+    24%
+        transform: translateY(0)
+    100%
+        transform: translateY(0)
+
+/* Pendulum */
+#pendulum
+    border: 10px solid transparent
+    height: 30px
+    width: 30px
+    margin: 30px auto
+    border-radius: 50%
+    text-align: center
+    transform-origin: left center
+    position: relative
+    left: 20px
+    top: -20px
+    animation-name: pendulum
+    animation-duration: 2s
+    animation-iteration-count: infinite
+    animation-direction: alternate
+    animation-timing-function: ease-in-out
+
+    .string
+        display: inline-block
+        border-top: 1px solid $lightPrimaryColor
+        margin: 0 0 -1px
+        width: 30px
+
+    .dot
+        position: absolute
+        display: inline-block
+        background: $lightPrimaryColor
+        height: 10px
+        width: 10px
+        border-radius: 50%
+        transform-origin: center
+        transform: translate(0px, 12px)
+
+@keyframes pendulum
+    0%
+        transform: rotate(30deg)
+    50%
+        transform: rotate(150deg)
+    100%
+        transform: rotate(30deg)            
+
+
+
+
+.gallery-2 button
+    text-transform: uppercase
+    text-decoration: none
+    font-size: 16px
+    padding: 12px 25px
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    cursor: pointer
+    +mainTransition
+    &.to-opaque-from-top
+        background: transparent
+        color: $lightPrimaryColor
+        border: 2px solid $lightPrimaryColor
+        position: relative
+        span
+            position: relative
+        &::before
+            display: block
+            content: " "
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 0
+            background: $lightPrimaryColor
+            +mainTransition
+        &:hover
+            color: #ffffff
+            &::before
+                height: 100%
+    &.to-opaque-from-center-horizontal
+        background: transparent
+        color: $lightPrimaryColor
+        border: 2px solid $lightPrimaryColor
+        position: relative
+        span
+            position: relative
+        &::before
+            display: block
+            content: " "
+            position: absolute
+            top: 50%
+            left: 0
+            width: 100%
+            height: 0
+            background: $lightPrimaryColor
+            +mainTransition
+        &:hover
+            color: #ffffff
+            &::before
+                top: 0
+                height: 100%
+    &.to-opaque-from-left
+        background: transparent
+        color: $lightPrimaryColor
+        border: 2px solid $lightPrimaryColor
+        position: relative
+        span
+            position: relative
+        &::before
+            display: block
+            content: " "
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 100%
+            background: $lightPrimaryColor
+            +mainTransition
+        &:hover
+            color: #ffffff
+            &::before
+                width: 100%
+    &.to-opaque-from-center-vertical
+        background: transparent
+        color: $lightPrimaryColor
+        border: 2px solid $lightPrimaryColor
+        position: relative
+        span
+            position: relative
+        &::before
+            display: block
+            content: " "
+            position: absolute
+            top: 0
+            right: 50%
+            width: 0
+            height: 100%
+            background: $lightPrimaryColor
+            +mainTransition
+        &:hover
+            color: #ffffff
+            &::before
+                right: 0
+                width: 100%
+    
+
+
+.progress-ring
+    circle
+        transform: rotate(-90deg)
+        transform-origin: 50% 50%
+        stroke: $lightPrimaryColor
+
+.background-ring
+    stroke: lighten($lightPrimaryColor, 35%)
+
+.rings-wrap
+    position: relative
+    width: 150px
+    height: 150px
+
+.ring-wrap
+    position: absolute
+    top: 0
+    left: 0
+
+.number
+    color: $lightPrimaryColor
+    font-size: 25px
+    font-family: sans-serif
+    position: absolute
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center

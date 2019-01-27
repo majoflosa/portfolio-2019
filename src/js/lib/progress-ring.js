@@ -7,7 +7,7 @@ export default class ProgressRing {
             return false;
         }
 
-        this.percent = options.percent;
+        // this.percent = Math.floor( Math.random() * 100 ); // options.percent;
         this.animationDuration = options.animationDuration;
         this.countedPercentage = 0;
         this.circumference;
@@ -22,6 +22,7 @@ export default class ProgressRing {
     animate() {
         let interval = setInterval( () => this.countPercentage(), 10 );
         this.countedPercentage = 0;
+        this.percent = Math.floor( Math.random() * 100 );
         this.calculateCircle();
 
         setTimeout( () => {
