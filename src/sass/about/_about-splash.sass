@@ -1,0 +1,33 @@
+.splash.about-splash
+    height: auto
+    min-height: 85vh
+    .splash-content
+        display: block
+        // text-align: center
+    .splash-content > div
+        width: auto
+    .splash-tagline
+        +mainFlex(center, center)
+        flex-wrap: wrap
+        max-width: 600px
+        margin: 50px auto 25px
+
+        img
+            max-width: 150px
+            flex: 0 0 50%
+        p
+            flex: 1 0 48%
+            text-align: left
+            margin-left: 2%
+            font-size: 1em
+            font-size: 1rem
+
+@media screen and (max-width: 600px)
+    .splash.about-splash
+        .splash-tagline
+            img
+                flex: 1 0 100%
+                justify-self: center
+            p
+                flex: 1 0 100%
+                text-align: center

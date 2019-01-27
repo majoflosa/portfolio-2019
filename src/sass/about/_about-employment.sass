@@ -1,0 +1,38 @@
+.employment-section
+    .page-section-title
+        text-align: center
+    &-list
+        max-width: 900px
+        width: 90%
+        margin: 0 auto
+
+    &-item
+        font-size: 1.1em
+        font-size: 1.1rem
+        margin-bottom: 75px
+        &:last-child
+            margin-bottom: 0
+        &-title
+            .main-title
+                text-transform: uppercase
+                color: $primaryColor
+                font-weight: bold
+            .employer, .employment-dates
+                font-style: italic
+                color: $lightPrimaryColor
+        &-body
+            ul
+                li
+                    margin: 0 auto 10px
+
+
+@media screen and (max-width: 600px)
+    .employment-section
+        &-item
+            &-title
+                .main-title
+                    font-size: 1em
+                    font-size: 1rem
+                .employer, .employment-dates
+                    font-size: 0.9em
+                    font-size: 0.9rem
