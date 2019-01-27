@@ -3,7 +3,9 @@ export default class LoadingScreen {
         this.$body = document.querySelector('body');
         this.$loadingScreen = this.$body.querySelector( selector );
         if ( !this.$loadingScreen ) {
-            console.warn( `The provided query selector ${selector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${selector} did not match any elements on the document.` );
+            
             return false;
         }
 

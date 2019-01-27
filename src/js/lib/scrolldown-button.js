@@ -7,7 +7,9 @@ export default class ScrollDownButton {
         this.$button = document.querySelector( options.buttonSelector );
         this.$currentSection = document.querySelector( options.currentSectionSelector );
         if ( !this.$button ) {
-            console.warn( `The provided query selector ${options.buttonSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${options.buttonSelector} did not match any elements on the document.` );
+                
             return false;
         }
 

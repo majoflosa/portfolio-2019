@@ -1,5 +1,6 @@
 import '../sass/style.sass';
 
+// General scripts
 import loadingScreen from './scripts/general-scripts/loading-screen-instance';
 import nav from './scripts/general-scripts/nav';
 import contactModal from './scripts/general-scripts/contact-modal';
@@ -10,6 +11,7 @@ nav();
 contactModal();
 splashScroll();
 
+// Home page scripts
 import homeTagline from './scripts/home-scripts/home-tagline-animation';
 import homeSplashPlx from './scripts/home-scripts/home-splash-plx';
 import homeServicesFadeIn from './scripts/home-scripts/home-services-fadein';
@@ -22,6 +24,12 @@ homeServicesFadeIn();
 homeSkillsFadeIn();
 homeProjectsFadeIn();
 
+// Client Work page scripts
 import clientProjectsFadeIn from './scripts/client-scripts/client-projects-fadein';
 
 clientProjectsFadeIn();
+
+// Personal Project page scripts
+import projectsFoliocliqueCarousel from './scripts/projects-scripts/projects-fc-carousel';
+
+projectsFoliocliqueCarousel();

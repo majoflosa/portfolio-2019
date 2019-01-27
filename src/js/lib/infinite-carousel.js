@@ -4,7 +4,9 @@ export default class InfiniteCarousel {
     constructor( options ) {
         this.$wrap = document.querySelector( options.wrapSelector );
         if ( !this.$wrap ) {
-            console.warn( `The provided query selector ${options.wrapSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${options.wrapSelector} did not match any elements on the document.` );
+                
             return false;
         }
         this.$innerWrap = this.$wrap.querySelector( options.innerWrapSelector );
@@ -19,7 +21,6 @@ export default class InfiniteCarousel {
 
         this.playCarousel = this.playCarousel.bind( this );
         this.nextItem = this.nextItem.bind( this );
-        this.previousItem = this.previousItem.bind( this );
 
         this.$items.forEach( item => this.$innerWrap.appendChild(item.cloneNode(true)) );
         this.playCarousel();

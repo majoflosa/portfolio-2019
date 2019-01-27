@@ -2,7 +2,8 @@ export default class ModalBox {
     constructor( options ) {
         this.$modal = document.querySelector( options.wrapperSelector );
         if ( !this.$modal ) {
-            console.warn( `The provided query selector ${options.wrapperSelector} did not match any element on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${options.wrapperSelector} did not match any element on the document.` );
 
             return false;
         }

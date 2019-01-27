@@ -4,7 +4,9 @@ export default class LayeredPlxBanner {
 
         this.$banner = document.querySelector( elements.banner );
         if ( !this.$banner ) {
-            console.warn( `The provided query selector ${elements.banner} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${elements.banner} did not match any elements on the document.` );
+            
             return false;
         }
 

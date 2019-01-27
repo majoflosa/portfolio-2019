@@ -4,7 +4,8 @@ export default class FadeInOnscroll {
     constructor( options ) {
         this.$element = document.querySelector( options.contentSelector );
         if ( !this.$element ) {
-            console.warn( `The provided query selector ${options.contentSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${options.contentSelector} did not match any elements on the document.` );
 
             return false;
         }

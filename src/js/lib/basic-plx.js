@@ -2,13 +2,15 @@ export default class BasicPlxBanner {
     constructor( selectors ) {
         this.$banner = document.querySelector( selectors.bannerSelector );
         if ( !this.$banner ) {
-            console.warn( `The provided query selector ${selectors.bannerSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development') 
+                console.warn( `The provided query selector ${selectors.bannerSelector} did not match any elements on the document.` );
 
             return false;
         }
         this.$bannerBg = this.$banner.querySelector( selectors.backgroundSelector );
         if ( !this.$bannerBg ) {
-            console.warn( `The provided query selector ${selectors.backgroundSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${selectors.backgroundSelector} did not match any elements on the document.` );
 
             return false;
         }

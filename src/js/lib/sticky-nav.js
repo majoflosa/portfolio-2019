@@ -3,7 +3,9 @@ export default class StickyNav {
         this.$nav = document.querySelector( options.navSelector );
         this.$mainWrap = document.querySelector( options.mainWrapSelector );
         if ( !this.$mainWrap ) {
-            console.warn( `The provided query selector ${options.mainWrapSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${options.mainWrapSelector} did not match any elements on the document.` );
+
             return false;
         }
         this.$splash = this.$mainWrap.querySelector( '.splash' );

@@ -4,7 +4,9 @@ export default class CarouselGallery {
     constructor( options ) {
         this.$outerWrapper = document.querySelector( options.outerWrapperSelector );
         if ( !this.$outerWrapper ) {
-            console.warn( `The provided query selector ${options.outerWrapperSelector} did not match any elements on the document.` );
+            if (process.env.NODE_ENV === 'development')
+                console.warn( `The provided query selector ${options.outerWrapperSelector} did not match any elements on the document.` );
+                
             return false;
         }
 
