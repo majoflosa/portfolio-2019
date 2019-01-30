@@ -100,7 +100,18 @@
                 width: auto
                 max-width: none
                 text-align: center
-                
+
+@media screen and (max-width: 600px)
+    .splash
+        .plx-background
+            overflow: hidden
+            img
+                display: block
+                height: 100%
+                width: 200%
+                max-width: none
+        &-overlay
+            background: rgba($darkPrimaryColor, 0.8)
 
 @keyframes fadeTaglinePieces
     0%
